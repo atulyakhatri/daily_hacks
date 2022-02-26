@@ -7,7 +7,7 @@ from selenium.webdriver.common.keys import Keys
 import os
 from plyer import notification
 
-def messanger():
+def messenger():
     try:
         url ="https://web.whatsapp.com/send?phone=+91xxxxxxxxxx"
 
@@ -70,7 +70,7 @@ edit = {"1":"01",
 print(date_edit)
 try:
     file = open("database.txt", "x")
-    messanger()
+    messenger()
     file.write(today_2)
     file.close()
 except Exception as e:
@@ -84,7 +84,7 @@ except Exception as e:
 ##           print(file.tell())
         except OSError as e:
             print(e)
-            messanger()
+            messenger()
             file.write(content)
             file.close()
             os._exit(0)
@@ -98,7 +98,7 @@ except Exception as e:
             file = open("database.txt", "wb")
             file.close()
             file = open("database.txt", "a+b")
-            messanger()
+            messenger()
             file.write(content)
             file.close()
         for x in edit.keys():
@@ -107,10 +107,9 @@ except Exception as e:
                 break
         
         if date_edit != date[8:14]:
-            messanger()
+            messenger()
             file.write(content)
             file.close()
-            os._exit(0)
 
 
     except Exception as e:
